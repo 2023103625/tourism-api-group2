@@ -1,6 +1,6 @@
 # Experience API - Tourism Açores
 
-## 📋 Descrição
+## Descrição
 
 Experience API é a camada de apresentação da arquitetura API-Led Connectivity para o sistema de gestão de pontos turísticos dos Açores.
 
