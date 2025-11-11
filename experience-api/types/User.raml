@@ -1,0 +1,23 @@
+#%RAML 1.0 DataType
+displayName: User
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  email:
+    type: string
+  avatar?:
+    type: string
+  role:
+    type: string
+    enum: [user, admin]
+  createdAt:
+    type: string
+    format: datetime
+example:
+  id: 42
+  name: "João Silva"
+  email: "joao@example.com"
+  role: "user"
