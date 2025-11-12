@@ -28,6 +28,17 @@ securitySchemes:
           type: string
 
 types:
+  PagingResponse:
+    type: object
+    properties:
+      data:
+        type: array
+        items: ItineraryCard
+      pagination:
+        type: object
+        properties:
+          total: integer
+
   User: !include types/User.raml
   AuthToken: !include types/AuthToken.raml
   LocationCard: !include types/LocationCard.raml
@@ -244,13 +255,12 @@ types:
   /itineraries:
     get:
       is: [ secured, corsEnabled, pagination ]
-      description: Lista itinerários do utilizador
+      description: Lista itinerários do utilizador com paginação
       responses:
         200:
           body:
             application/json:
-              type: array
-              items: ItineraryCard
+              type: PagingResponse
               example: !include examples/itineraries-list-example.json
 
     post:

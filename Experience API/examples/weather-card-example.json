@@ -2,8 +2,8 @@
   "current": {
     "temperature": 18.5,
     "condition": "Cloudy",
-    "windSpeed": 25
+    "windSpeed": 25,
+    "humidity": 87
   },
-  "forecast": [],
-  "alerts": []
+  "forecast": []
 }
